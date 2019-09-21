@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/img/best-logo-512.png":
+/*!******************************************!*\
+  !*** ./app/assets/img/best-logo-512.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"61bfb904a1e380469f06da7c1e2ed07c.png\";\n\n//# sourceURL=webpack:///./app/assets/img/best-logo-512.png?");
+
+/***/ }),
+
 /***/ "./app/src/components/home/Home.jsx":
 /*!******************************************!*\
   !*** ./app/src/components/home/Home.jsx ***!
@@ -94,7 +105,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/home.css */ \"./app/src/components/home/styles/home.css\");\n/* harmony import */ var _styles_home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_home_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar Home = function Home() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"nav\", {\n    className: \"navbar navbar-expand-lg shadow-none\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"container\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n    className: \"navbar-brand \".concat(_styles_home_css__WEBPACK_IMPORTED_MODULE_1___default.a.app)\n  }, \"Navbar\")));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./app/src/components/home/Home.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/home.css */ \"./app/src/components/home/styles/home.css\");\n/* harmony import */ var _styles_home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_home_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_img_best_logo_512_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/img/best-logo-512.png */ \"./app/assets/img/best-logo-512.png\");\n/* harmony import */ var _assets_img_best_logo_512_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_img_best_logo_512_png__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nvar Home = function Home() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"nav\", {\n    className: \"navbar navbar-expand-lg shadow-none\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n    className: \"navbar-brand\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _assets_img_best_logo_512_png__WEBPACK_IMPORTED_MODULE_2___default.a,\n    className: \"d-inline-block align-top\",\n    width: \"50\",\n    height: \"50\",\n    alt: \"logo\"\n  }), \"Best\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./app/src/components/home/Home.jsx?");
 
 /***/ }),
 
@@ -175,7 +186,7 @@ eval("function _inheritsLoose(subClass, superClass) {\n  subClass.prototype = Ob
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".YtV7cap-DbpeEHV7GAmHD {\\n  color: #8bc43a!important;\\n}\\n\", \"\"]);\n// Exports\nexports.locals = {\n\t\"app\": \"YtV7cap-DbpeEHV7GAmHD\"\n};\n\n//# sourceURL=webpack:///./app/src/components/home/styles/home.css?./node_modules/css-loader/dist/cjs.js??ref--5-1");
+eval("exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./app/src/components/home/styles/home.css?./node_modules/css-loader/dist/cjs.js??ref--5-1");
 
 /***/ }),
 
