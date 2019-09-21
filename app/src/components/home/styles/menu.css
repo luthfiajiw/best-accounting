@@ -1,7 +1,7 @@
 :local .menu_background {
   width: 100%;
   background-color: #8bc43a;
-  padding: 20px;
+  padding: 50px 20px;
   position: absolute;
   border-radius: 7px;
   top: 50%;
@@ -11,7 +11,7 @@
 
 :local .card_menu {
   position: relative;
-  height: 150px;
+  height: 160px;
   background-color: #fff;
   color: #8bc43a;
   margin: 15px;
