@@ -1,15 +1,15 @@
-import React from 'react';
-import styles from './styles/home.css';
+import React, { Fragment } from 'react';
 
-import bestLogo from '../../../assets/img/best-logo-512.png';
+import Header from './Header';
+import Menu from './Menu';
+import Footer from './Footer';
 
 const Home = () => (
-  <nav className="navbar navbar-expand-lg shadow-none">
-    <span className="navbar-brand">
-      <img src={bestLogo} className="d-inline-block align-top" width="50" height="50" alt="logo" />
-      Best
-    </span>
-  </nav>
+  <Fragment>
+    <Header />
+    <Menu />
+    <Footer />
+  </Fragment>
 );
 
 export default Home;

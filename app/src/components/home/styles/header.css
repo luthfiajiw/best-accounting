@@ -1,0 +1,16 @@
+.bestLogo {
+  font-size: 25px;
+  color: #8bc43a;
+  padding: 0 5px;
+}
+
+.powerbutton {
+  margin: 5px 0px;
+  padding: 20px 15px;
+  font-size: 19px;
+  transition: .5s;
+}
+
+.powerbutton:hover {
+  color: #f5593d !important;
+}

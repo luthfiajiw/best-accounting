@@ -6,9 +6,14 @@ let mainWindow;
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
+    width: 1200,
+    height: 650,
+    resizable: false,
+    fullscreen: true,
+    center: true,
     webPreferences: {
       nodeIntegration: true,
-    }
+    },
   });
-  mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
-})
+  mainWindow.loadURL(`file://${__dirname}/dist/index.html`);
+});

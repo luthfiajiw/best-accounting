@@ -1,0 +1,38 @@
+:local .menu_background {
+  width: 100%;
+  background-color: #8bc43a;
+  padding: 20px;
+  position: absolute;
+  border-radius: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+:local .card_menu {
+  position: relative;
+  height: 150px;
+  background-color: #fff;
+  color: #8bc43a;
+  margin: 15px;
+  width: 30%;
+  border-radius: 7px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+:local .menu {
+  width: 100%;
+  position: absolute;
+  border-radius: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+}
+
+:local .menu p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
