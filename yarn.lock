@@ -5417,6 +5417,11 @@ react-dom@^16.9.0:
     prop-types "^15.6.2"
     scheduler "^0.15.0"
 
+react-ink@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/react-ink/-/react-ink-6.4.0.tgz#fa1573104237d3c08bcbf06108f3197b16762f76"
+  integrity sha512-CucEgFtGVFd0yJ8a+fic7FRHPv8QDba7UOoTvg4ezaRLGA7/FitwiQMIydBfiaZ7v+mrCsqWaH2ZpmthZRMxgQ==
+
 react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
