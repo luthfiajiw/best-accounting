@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { DefaultButton } from 'office-ui-fabric-react';
 import { Tabs, Tab } from 'react-bootstrap';
 
 import Window from '../../../components/home/Window';
-import { General } from './add-company-data';
+import { General, AccountingPeriod } from './add-company-data';
 
 const propTypes = {
   isOpen: PropTypes.bool,
@@ -16,25 +15,41 @@ const defaultProps = {
   onCloseWindow: () => undefined,
 };
 
-const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => (
-  <Window isOpen={isOpen} titleWindow="Company Information">
-    <Tabs id="company-information" className="py-3">
-      <Tab eventKey="general" title="General">
-        <General />
-      </Tab>
-      <Tab eventKey="accounting-period" title="Accounting Period">
-        <General />
-      </Tab>
-      <Tab eventKey="taxation" title="Taxation">
-        <General />
-      </Tab>
-    </Tabs>
-    <DefaultButton
-      text="Close"
-      onClick={() => onCloseWindow('AddCompanyDataWindow')}
-    />
-  </Window>
-);
+const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
+  const [tabActive, setTabActive] = useState('general');
+
+  return (
+    <Window isOpen={isOpen} titleWindow="Company Information" icon="fal fa-building">
+      <Tabs className="py-3" activeKey={tabActive} onSelect={(key) => setTabActive(key)}>
+        <Tab
+          eventKey="general"
+          title="General"
+          disabled={tabActive !== 'general'}
+        >
+          <General
+            onCloseWindow={() => onCloseWindow('AddCompanyDataWindow')}
+            onNextTab={() => setTabActive('accounting-period')}
+          />
+        </Tab>
+        <Tab
+          eventKey="accounting-period"
+          title="Accounting Period"
+          disabled={tabActive !== 'accounting-period'}
+        >
+          <AccountingPeriod />
+        </Tab>
+        <Tab
+          eventKey="taxation"
+          title="Taxation"
+          disabled={tabActive !== 'taxation'}
+        >
+          <General />
+        </Tab>
+      </Tabs>
+    </Window>
+  );
+};
+
 
 AddCompanyDataWindow.propTypes = propTypes;
 AddCompanyDataWindow.defaultProps = defaultProps;

@@ -11,6 +11,7 @@ const Home = () => {
   const [splash, setSplash] = useState(true);
   const [showAddCompanyDataWindow, setShowAddCompanyDataWindow] = useState(false);
 
+  // function handling
   const handleClickMenu = (menu) => {
     switch (menu) {
       case 'AddCompanyData':
@@ -19,7 +20,6 @@ const Home = () => {
       default:
     }
   };
-
   const handleCloseWindow = (window) => {
     switch (window) {
       case 'AddCompanyDataWindow':
