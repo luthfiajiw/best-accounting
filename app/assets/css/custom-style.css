@@ -1,3 +1,20 @@
 body {
   cursor: default !important;
+  user-select: none !important;
+}
+
+[type=button]:not(:disabled) {
+  cursor: default !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+a:link {
+  cursor: default !important;
+}
+
+a:focus {
+  outline: none !important;
 }

@@ -5,12 +5,6 @@
   border-radius: 7px;
 }
 
-@media (min-width: 1201px) {
-  .menu_background {
-    margin-top: 60px !important;
-  }
-}
-
 :local .card_menu {
   position: relative;
   height: 160px;

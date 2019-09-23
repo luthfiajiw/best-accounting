@@ -5,12 +5,23 @@
 }
 
 .powerbutton {
-  margin: 5px 0px;
-  padding: 20px 15px;
+  display: flex;
+  align-items: center;
   font-size: 19px;
   transition: .5s;
 }
 
 .powerbutton:hover {
   color: #f5593d !important;
+}
+
+.navbar {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media screen and (min-height: 651px) {
+  .navbar {
+    margin-top: 50px;
+  }
 }

@@ -1,14 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row } from 'react-bootstrap';
 import Ink from 'react-ink';
 
 import styles from './styles/menu.css';
 
-const Menu = () => (
+const Menu = ({ handleClick }) => (
   <Container className={styles.menu_background}>
     <Row className="d-flex justify-content-center">
       <div className={styles.card_menu}>
-        <div className={styles.menu}>
+        <div
+          role="presentation"
+          className={styles.menu}
+          onClick={() => handleClick('AddCompanyData')}
+          onKeyPress={() => {}}
+        >
           <i className="far fa-folder-plus fa-4x" />
           <p>Membuat Data Baru</p>
           <Ink />
@@ -32,13 +38,20 @@ const Menu = () => (
       </div>
       <div className={styles.card_menu}>
         <div className={styles.menu}>
-          <i className="far fa-tasks fa-4x" />
-          <p>Daftar Data</p>
+          <i className="far fa-registered fa-4x" />
+          <p>Register</p>
           <Ink />
         </div>
       </div>
     </Row>
   </Container>
 );
+
+Menu.propTypes = {
+  handleClick: PropTypes.func,
+};
+Menu.defaultProps = {
+  handleClick: () => undefined,
+};
 
 export default Menu;
