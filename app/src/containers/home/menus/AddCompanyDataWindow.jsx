@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab } from 'react-bootstrap';
 
 import Window from '../../../components/home/Window';
-import { General, AccountingPeriod } from './add-company-data';
+import { General, AccountingPeriod, Taxation } from './add-company-data';
 
 const propTypes = {
   isOpen: PropTypes.bool,
@@ -17,8 +17,12 @@ const defaultProps = {
 
 const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
   const [tabActive, setTabActive] = useState('general');
+  useEffect(() => {
+    setTimeout(() => {
+      setTabActive('general');
+    }, 1000);
+  }, [isOpen]);
 
-  console.log(tabActive);
   return (
     <Window isOpen={isOpen} titleWindow="Company Information" icon="fal fa-building">
       <Tabs className="py-3" activeKey={tabActive} onSelect={(key) => setTabActive(key)}>
@@ -48,7 +52,10 @@ const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
           title="Taxation"
           disabled={tabActive !== 'taxation'}
         >
-          <General />
+          <Taxation
+            onCloseWindow={() => onCloseWindow('AddCompanyDataWindow')}
+            onPrevTab={() => setTabActive('accounting-period')}
+          />
         </Tab>
       </Tabs>
     </Window>

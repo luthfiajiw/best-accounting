@@ -6,6 +6,7 @@ import {
 } from 'office-ui-fabric-react';
 
 import { DatePicker, MonthOptions } from '../../../../libs';
+import ButtonActions from './ButtonActions';
 
 const AccountingPeriod = ({
   onPrevTab, onCloseWindow, onNextTab,
@@ -154,25 +155,11 @@ const AccountingPeriod = ({
         ]}
       />
 
-      <div className="d-flex justify-content-end pt-3">
-        <DefaultButton
-          text="Help"
-        />
-        <DefaultButton
-          text="Close"
-          className="mx-2"
-          onClick={onCloseWindow}
-        />
-        <PrimaryButton
-          text="Prev"
-          className="mr-2"
-          onClick={onPrevTab}
-        />
-        <PrimaryButton
-          text="Next"
-          onClick={onNextTab}
-        />
-      </div>
+      <ButtonActions
+        onCloseWindow={onCloseWindow}
+        onPrevTab={onPrevTab}
+        onNextTab={onNextTab}
+      />
     </Form>
   );
 };

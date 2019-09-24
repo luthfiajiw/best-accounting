@@ -29,7 +29,7 @@ const Home = () => {
     }
   };
 
-  // Side-effect similar as componentDidMount
+  // Side-effect similar to componentDidMount
   useEffect(() => {
     setInterval(() => {
       setSplash(false);

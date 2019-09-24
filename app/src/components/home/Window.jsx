@@ -23,7 +23,7 @@ const Window = ({
     isOpen={isOpen}
     isBlocking
   >
-    <Container className="px-3 py-4" style={{ width: '600px' }}>
+    <Container className="px-3 py-4" style={{ width: '600px', height: '675px' }}>
       <div className="d-flex justify-content-start">
         <h5 className="font-weight-bold">
           <i className={`${icon} mr-2`} />

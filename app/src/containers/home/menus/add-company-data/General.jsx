@@ -4,6 +4,8 @@ import { Formik } from 'formik';
 import { Form, Row, Col } from 'react-bootstrap';
 import { TextField, DefaultButton, PrimaryButton } from 'office-ui-fabric-react';
 
+import ButtonActions from './ButtonActions';
+
 const defaultValue = {
   company_name: '',
   co_registered_no: '',
@@ -102,20 +104,11 @@ const General = ({ onCloseWindow, onNextTab }) => (
           onChange={handleChange}
         />
 
-        <div className="d-flex justify-content-end pt-3">
-          <DefaultButton
-            text="Help"
-          />
-          <DefaultButton
-            text="Close"
-            className="mx-2"
-            onClick={onCloseWindow}
-          />
-          <PrimaryButton
-            text="Next"
-            onClick={onNextTab}
-          />
-        </div>
+        <ButtonActions
+          hasPrevButton={false}
+          onCloseWindow={onCloseWindow}
+          onNextTab={onNextTab}
+        />
       </Form>
     )}
   </Formik>

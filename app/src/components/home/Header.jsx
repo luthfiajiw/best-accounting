@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { TooltipHost } from 'office-ui-fabric-react';
 
 import styles from './styles/header.css';
 import bestBrand from '../../../assets/img/best-brand.png';
 
 const Header = () => (
   <Container className={`${styles.navbar}`}>
-    <nav className="navbar-expand-lg shadow-none d-flex justify-content-between py-2">
+    <nav className="navbar-expand-lg shadow-none d-flex justify-content-between align-items-center py-2">
       <span className="navbar-brand d-flex align-items-end px-0">
         <img
           src={bestBrand}
@@ -17,7 +18,9 @@ const Header = () => (
         />
         <p className="pl-2"> GL Basic v0.0.1</p>
       </span>
-      <i className={`far fa-power-off text-secondary ${styles.powerbutton}`} />
+      <TooltipHost content="Exit" styles={{ height: '50%' }} directionalHint="bottomCenter">
+        <i className={`far fa-power-off text-secondary ${styles.powerbutton}`} />
+      </TooltipHost>
     </nav>
   </Container>
 );
