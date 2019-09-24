@@ -16,14 +16,14 @@ const Menu = ({ handleClick }) => (
           onKeyPress={() => {}}
         >
           <i className="far fa-folder-plus fa-4x" />
-          <p>Membuat Data Baru</p>
+          <p>Create Company Data</p>
           <Ink />
         </div>
       </div>
       <div className={styles.card_menu}>
         <div className={styles.menu}>
           <i className="far fa-folder-open fa-4x" />
-          <p>Buka Data</p>
+          <p>Open Existing Data</p>
           <Ink />
         </div>
       </div>
@@ -32,7 +32,7 @@ const Menu = ({ handleClick }) => (
       <div className={styles.card_menu}>
         <div className={styles.menu}>
           <i className="far fa-folders fa-4x" />
-          <p>Contoh Data</p>
+          <p>Open Sample Data</p>
           <Ink />
         </div>
       </div>
