@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import { Form, Row, Col } from 'react-bootstrap';
-import { TextField, DefaultButton, PrimaryButton } from 'office-ui-fabric-react';
+import { TextField } from 'office-ui-fabric-react';
 
 import ButtonActions from './ButtonActions';
 
@@ -100,6 +100,7 @@ const General = ({ onCloseWindow, onNextTab }) => (
         <TextField
           label="Website"
           name="web"
+          prefix="https://"
           value={values.web}
           onChange={handleChange}
         />

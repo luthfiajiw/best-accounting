@@ -8,14 +8,16 @@ import { General, AccountingPeriod, Taxation } from './add-company-data';
 const propTypes = {
   isOpen: PropTypes.bool,
   onCloseWindow: PropTypes.func,
+  onNextLogin: PropTypes.func,
 };
 
 const defaultProps = {
   isOpen: false,
   onCloseWindow: () => undefined,
+  onNextLogin: () => undefined,
 };
 
-const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
+const AddCompanyDataWindow = ({ isOpen, onCloseWindow, onNextLogin }) => {
   const [tabActive, setTabActive] = useState('general');
   useEffect(() => {
     setTimeout(() => {
@@ -24,7 +26,12 @@ const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
   }, [isOpen]);
 
   return (
-    <Window isOpen={isOpen} titleWindow="Company Information" icon="fal fa-building">
+    <Window
+      isOpen={isOpen}
+      titleWindow="Company Information"
+      icon="fal fa-building"
+      windowStyle={{ width: '600px', height: '675px' }}
+    >
       <Tabs className="py-3" activeKey={tabActive} onSelect={(key) => setTabActive(key)}>
         <Tab
           eventKey="general"
@@ -55,6 +62,7 @@ const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
           <Taxation
             onCloseWindow={() => onCloseWindow('AddCompanyDataWindow')}
             onPrevTab={() => setTabActive('accounting-period')}
+            onNextTab={onNextLogin}
           />
         </Tab>
       </Tabs>

@@ -6,9 +6,11 @@ import Menu from '../../components/home/Menu';
 import Footer from '../../components/home/Footer';
 import SplashScreen from '../../components/home/SplashScreen';
 import AddCompanyDataWindow from './menus/AddCompanyDataWindow';
+import LoginWindow from './login/LoginWindow';
 
 const Home = () => {
   const [splash, setSplash] = useState(true);
+  const [showLoginWindow, setShowLoginWindow] = useState(false);
   const [showAddCompanyDataWindow, setShowAddCompanyDataWindow] = useState(false);
 
   // function handling
@@ -25,8 +27,15 @@ const Home = () => {
       case 'AddCompanyDataWindow':
         setShowAddCompanyDataWindow(false);
         break;
+      case 'LoginWindow':
+        setShowLoginWindow(false);
+        break;
       default:
     }
+  };
+  const onOpenLoginWindow = () => {
+    setShowLoginWindow(true);
+    setShowAddCompanyDataWindow(false);
   };
 
   // Side-effect similar to componentDidMount
@@ -51,6 +60,12 @@ const Home = () => {
 
       <AddCompanyDataWindow
         isOpen={showAddCompanyDataWindow}
+        onCloseWindow={handleCloseWindow}
+        onNextLogin={onOpenLoginWindow}
+      />
+
+      <LoginWindow
+        isOpen={showLoginWindow}
         onCloseWindow={handleCloseWindow}
       />
     </Fragment>

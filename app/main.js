@@ -7,7 +7,7 @@ let mainWindow;
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
     width: 1200,
-    height: 650,
+    height: 680,
     resizable: false,
     fullscreen: true,
     center: true,
