@@ -785,6 +785,15 @@
     "@uifabric/styling" "^7.6.2"
     tslib "^1.7.1"
 
+"@uifabric/icons@^7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/icons/-/icons-7.3.0.tgz#db5b418d1db1e3f05e92d71f2dc829aa6e239bdb"
+  integrity sha512-wbcR8fJce20sPjsK2bbTC/cAZfAOFuE4dd4LHw194+8H+/dqotsowrQVp5Lu8aaHGQk+fXoiZmUy30WA9cAG4Q==
+  dependencies:
+    "@uifabric/set-version" "^7.0.2"
+    "@uifabric/styling" "^7.7.1"
+    tslib "^1.7.1"
+
 "@uifabric/merge-styles@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@uifabric/merge-styles/-/merge-styles-7.6.0.tgz#7ac8a30547bbb298148fc7e7a7cf5ef34e583b57"
@@ -820,10 +829,31 @@
     "@uifabric/utilities" "^7.0.11"
     tslib "^1.7.1"
 
+"@uifabric/styling@^7.7.1":
+  version "7.7.1"
+  resolved "https://registry.yarnpkg.com/@uifabric/styling/-/styling-7.7.1.tgz#d554a22b92a6166e5fa04eae6a8228ec5bd9a175"
+  integrity sha512-w2Kd0aTdqGi6O8z3srsQgaIMwGwllQG1/HOoFiqtDR6jXj8oFKKpjnlFFhRG5Wu4CAVftBPo4gn5Cfh3+JR2Bw==
+  dependencies:
+    "@microsoft/load-themed-styles" "^1.7.13"
+    "@uifabric/merge-styles" "^7.6.0"
+    "@uifabric/set-version" "^7.0.2"
+    "@uifabric/utilities" "^7.1.0"
+    tslib "^1.7.1"
+
 "@uifabric/utilities@^7.0.10", "@uifabric/utilities@^7.0.11", "@uifabric/utilities@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@uifabric/utilities/-/utilities-7.0.11.tgz#0bdd3ebd5eb60821b0bf1eabe689d160b48aa096"
   integrity sha512-43PYM5BgW0Mb54Cc/oTM2ffjOxDkjzDJSp11inXEyTC5I2LIfpBYj1yxSsBzOEUo1tlswzB6xIyBd+arFUtKlA==
+  dependencies:
+    "@uifabric/merge-styles" "^7.6.0"
+    "@uifabric/set-version" "^7.0.2"
+    prop-types "^15.5.10"
+    tslib "^1.7.1"
+
+"@uifabric/utilities@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/utilities/-/utilities-7.1.0.tgz#5590663039316e05979421c6a1e448b7090a418e"
+  integrity sha512-24mNXSVLqZv77zAsC/tulJTexTuXjm3rU5mWhhboiy8oIMRCEjFbAlS2CrwxVp2JoiVsJHIn/owRF/3Jlv723Q==
   dependencies:
     "@uifabric/merge-styles" "^7.6.0"
     "@uifabric/set-version" "^7.0.2"

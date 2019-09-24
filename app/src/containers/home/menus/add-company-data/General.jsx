@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import { Form, Row, Col } from 'react-bootstrap';
 import { TextField, DefaultButton, PrimaryButton } from 'office-ui-fabric-react';
@@ -13,6 +14,16 @@ const defaultValue = {
   fax: '',
   email: '',
   web: '',
+};
+
+const propTypes = {
+  onCloseWindow: PropTypes.func,
+  onNextTab: PropTypes.func,
+};
+
+const defaultProps = {
+  onCloseWindow: () => undefined,
+  onNextTab: () => undefined,
 };
 
 const General = ({ onCloseWindow, onNextTab }) => (
@@ -109,5 +120,8 @@ const General = ({ onCloseWindow, onNextTab }) => (
     )}
   </Formik>
 );
+
+General.propTypes = propTypes;
+General.defaultProps = defaultProps;
 
 export default General;

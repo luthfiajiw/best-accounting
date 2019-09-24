@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { DatePicker as Calendar, DayOfWeek } from 'office-ui-fabric-react';
 
 const dayPickerStrings = {
@@ -6,24 +7,33 @@ const dayPickerStrings = {
   shortMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
   shortDays: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+  goToToday: 'Go to today',
+  closeButtonAriaLabel: 'Close date picker',
 };
 
-const DatePicker = ({ label }) => {
-  const [date, setDate] = useState(null);
-  const handleSelectDate = (value) => {
-    setDate(value);
-  };
+const DatePicker = ({ label, value, onSelectDate }) => (
+  <Calendar
+    label={label}
+    ariaLabel="Select a date"
+    placeholder="Select a date ..."
+    isRequired={false}
+    firstDayOfWeek={DayOfWeek.Sunday}
+    strings={dayPickerStrings}
+    value={value}
+    onSelectDate={onSelectDate}
+  />
+);
 
-  return (
-    <Calendar
-      label={label}
-      isRequired={false}
-      firstDayOfWeek={DayOfWeek.Sunday}
-      strings={dayPickerStrings}
-      value={date}
-      onSelectDate={handleSelectDate}
-    />
-  );
+DatePicker.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.string,
+  onSelectDate: PropTypes.func,
+};
+
+DatePicker.defaultProps = {
+  label: '',
+  value: null,
+  onSelectDate: () => undefined,
 };
 
 

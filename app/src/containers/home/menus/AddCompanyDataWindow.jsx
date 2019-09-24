@@ -18,6 +18,7 @@ const defaultProps = {
 const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
   const [tabActive, setTabActive] = useState('general');
 
+  console.log(tabActive);
   return (
     <Window isOpen={isOpen} titleWindow="Company Information" icon="fal fa-building">
       <Tabs className="py-3" activeKey={tabActive} onSelect={(key) => setTabActive(key)}>
@@ -36,7 +37,11 @@ const AddCompanyDataWindow = ({ isOpen, onCloseWindow }) => {
           title="Accounting Period"
           disabled={tabActive !== 'accounting-period'}
         >
-          <AccountingPeriod />
+          <AccountingPeriod
+            onCloseWindow={() => onCloseWindow('AddCompanyDataWindow')}
+            onNextTab={() => setTabActive('taxation')}
+            onPrevTab={() => setTabActive('general')}
+          />
         </Tab>
         <Tab
           eventKey="taxation"
