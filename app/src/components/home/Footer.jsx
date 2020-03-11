@@ -9,13 +9,13 @@ const Footer = () => (
       src={bamboo}
       alt="bamboo"
       className="d-inline-block"
-      height="250"
+      height="300"
     />
     <img
       src={bamboo}
       alt="bamboo"
       className="d-inline-block"
-      height="250"
+      height="300"
     />
   </nav>
 );
