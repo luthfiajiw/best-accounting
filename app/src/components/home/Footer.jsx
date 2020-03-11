@@ -1,16 +1,23 @@
 import React from 'react';
 
 import styles from './styles/footer.css';
+import bamboo from '../../../assets/img/bamboo.png';
 
 const Footer = () => (
-  <nav className="navbar navbar-expand-lg fixed-bottom shadow-none d-flex justify-content-center">
-    <p className={styles.footer}>Blog</p>
-    <p className={styles.footer}>Help Center</p>
-    <p className={styles.footer}>Terms</p>
-    <p className={styles.footer}>Privacy Policy</p>
-    <p className={styles.footer_copyright}>© 2019 Best</p>
+  <nav className={`${styles.footer} navbar mx-5 d-flex justify-content-between navbar-expand-lg fixed-bottom shadow-none`}>
+    <img
+      src={bamboo}
+      alt="bamboo"
+      className="d-inline-block"
+      height="250"
+    />
+    <img
+      src={bamboo}
+      alt="bamboo"
+      className="d-inline-block"
+      height="250"
+    />
   </nav>
-
 );
 
 export default Footer;

@@ -1,6 +1,6 @@
 const electron = require('electron');
 
-const { app, BrowserWindow } = electron;
+const { app, BrowserWindow, ipcMain } = electron;
 
 let mainWindow;
 
@@ -17,3 +17,5 @@ app.on('ready', () => {
   });
   mainWindow.loadURL(`file://${__dirname}/dist/index.html`);
 });
+
+ipcMain.on('app:exit', () => app.quit());

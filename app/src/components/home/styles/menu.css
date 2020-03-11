@@ -1,6 +1,6 @@
 :local .menu_background {
   width: 100%;
-  background-color: #8bc43a;
+  background-color: transparent;
   padding: 50px 20px;
   border-radius: 7px;
 }
@@ -13,7 +13,6 @@
   margin: 15px;
   width: 30%;
   border-radius: 7px;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
 :local .menu {

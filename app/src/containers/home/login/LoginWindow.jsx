@@ -58,4 +58,10 @@ const LoginWindow = ({ isOpen, onCloseWindow, onSubmit }) => (
   </Window>
 );
 
+LoginWindow.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onCloseWindow: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
+
 export default LoginWindow;
