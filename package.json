@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@uifabric/icons": "^7.3.0",
-    "electron": "^6.0.10",
+    "electron": "^11.5.0",
     "formik": "^1.5.8",
     "mini-css-extract-plugin": "^0.8.0",
     "office-ui-fabric-react": "^7.37.0",
